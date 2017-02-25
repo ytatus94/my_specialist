@@ -1,0 +1,158 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt, letterpaper]{article}
+%
+% 這是 specialist 的 parctice talk 時被問到的問題與解答
+%
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec} % XeTeX 中文字型
+\setmainfont{LiHei Pro} % XeTeX 中文字型
+\usepackage{color} % 加上顏色
+\usepackage{amsmath} % 數學表示
+\usepackage{framed} % 使用 box
+
+\XeTeXlinebreaklocale "zh" % XeTeX 中文斷行
+\XeTeXlinebreakskip = 0pt plus 1pt % XeTeX 中文斷行
+
+\begin{document}
+\begin{itemize}
+\item p. 10\newline
+vector supermultiplet 是否有 chirality?\newline
+\textcolor{blue}{Ans:}
+
+\item p. 10\newline
+Define chirality\newline
+\textcolor{blue}{Ans:} 見 backup p. 51
+
+\item p.12\newline
+為什麼 Higgs mass 的修正來自於 fermions 和 scalars?\newline
+\textcolor{blue}{Ans:}
+
+\item p. 14\newline
+change slope $\sim 10^{4}$ GeV 的原因是什麼?\newline
+\textcolor{blue}{Ans:} 使用不同的 model. Baer 回答：The RGEs change when one transitions from the SM to the MSSM. See Ch. 9.2 of Weak Scale Supersymmetry
+
+\item p. 19\newline
+$\epsilon$ is a spinor and $\epsilon^{\dag}$ is the hermitian conjugate of $\epsilon$ ，那麼為什麼 $\delta \phi^{*} = \epsilon^{\dag} \psi^{\dag}$ 而不是 $\psi^{\dag} \epsilon^{\dag}$?\newline
+\textcolor{blue}{Ans:}
+\begin{framed}
+\begin{equation*}
+\underbrace{\Psi^{\dag}_{\dot{\alpha}}}_{R} \equiv (\underbrace{\Psi_{\alpha}}_{L})^{\dag} = (\Psi^{\dag})_{\alpha}, \quad (\underbrace{\Psi^{\dag \dot{\alpha}}}_{R})^{\dag} = \Psi^{\alpha}, \quad \overline{\Psi}_{\dot{\alpha}} = (\Psi_{\alpha})^{*}
+\end{equation*}
+\begin{equation*}
+\xi^{\dag} \chi^{\dag} = \chi^{\dag} \xi^{\dag} = (\xi \chi)^{*}
+\end{equation*}
+\begin{equation*}
+\xi^{\dag} \overline{\sigma}^{\mu} \chi = - \chi \sigma^{\mu} \xi^{\dag} = (\chi^{\dag} \overline{\sigma}^{\mu} \xi)^{*} = - (\xi \sigma^{\mu} \chi^{\dag})^{*}
+\end{equation*}
+只是使用 complex conjugate，若是量子場時才使用 hermitian conjugage.
+\begin{equation*}
+(\psi \chi)^{\dag} = \overline{\chi}_{\dot{\alpha}} \overline{\psi}^{\dot{\alpha}} = (\chi \psi)^{*} = \overline{\chi} \overline{\psi} = \overline{\psi} \overline{\chi}
+\end{equation*}
+\end{framed}
+\begin{equation*}
+\delta \phi = \epsilon \psi \rightarrow (\delta \phi)^{*} = (\epsilon \psi)^{*} = \epsilon^{\dag} \psi^{\dag}
+\end{equation*}
+
+\item p. 20\newline
+$\delta \psi_{\alpha} = - i (\sigma^{\mu} \epsilon^{\dag})_{\alpha} \partial_{\mu} \phi + \epsilon_{\alpha} \mathcal{F}$\newline
+$\delta \psi^{\dag}_{\dot{\alpha}} = i (\epsilon \sigma^{\mu})_{\dot{\alpha}} \partial_{\mu} \phi^{*} + \epsilon^{\dag}_{\dot{\alpha}} \mathcal{F}^{*}$\newline
+\newline
+其中的 $\sigma^{\mu} \epsilon^{\dag}$ 和 $\epsilon \sigma^{\mu}$ 的順序為什麼不同？\newline
+\textcolor{blue}{Ans:}
+\begin{align*}
+\delta \psi_{\alpha} &= - i (\sigma^{\mu} \epsilon^{\dag})_{\alpha} \partial_{\mu} \phi + \epsilon_{\alpha} \mathcal{F}\\
+\Rightarrow
+(\delta \psi_{\alpha})^{\dag} &= \big[ - i (\sigma^{\mu} \epsilon^{\dag})_{\alpha} \partial_{\mu} \phi + \epsilon_{\alpha} \mathcal{F} \big]^{\dag}\\
+&= +i \big[ (\sigma^{\mu} \epsilon^{\dag})_{\alpha} \partial_{\mu} \phi \big]^{\dag} + (\epsilon_{\alpha} \mathcal{F})^{\dag}
+\end{align*}
+其中 $(\epsilon_{\alpha} \mathcal{F})^{\dag} = \mathcal{F}^{\dag} (\epsilon_{\alpha})^{\dag} = \mathcal{F}^{\dag} \epsilon^{\dag}_{\dot{\alpha}} = \epsilon^{\dag}_{\dot{\alpha}} \mathcal{F}^{\dag} = \epsilon^{\dag}_{\dot{\alpha}} \mathcal{F}^{*}$ (因為 $\mathcal{F}$ 是 scalar field，所以 $\mathcal{F}^{\dag} = \mathcal{F}^{*}$)
+\begin{align*}
+\big[ (\sigma^{\mu} \epsilon^{\dag})_{\alpha} \partial_{\mu} \phi \big]^{\dag}
+&= (\partial_{\mu} \phi)^{\dag} \big[ (\sigma^{\mu} \epsilon^{\dag})_{\alpha} \big]^{\dag}\\
+&= \partial_{\mu} \phi^{*} (\sigma^{\mu} \epsilon^{\dag})^{\dag}_{\dot{\alpha}}\\
+&= (\sigma^{\mu} \epsilon^{\dag})^{\dag}_{\dot{\alpha}} \partial_{\mu} \phi^{*}\\
+&= \big[ \epsilon (\sigma^{\mu})^{\dag} \big]_{\dot{\alpha}} \partial_{\mu} \phi^{*}\\
+&= (\epsilon \sigma^{\mu})_{\dot{\alpha}} \partial_{\mu} \phi^{*}
+\end{align*}
+其中 $(\sigma^{\mu})^{\dag} = \sigma^{\mu}$，列出 $\mu = 0, 1, 2, 3, 4$ 就知道了.\newline
+所以 $(\delta \psi_{\alpha})^{\dag} = \delta \psi^{\dag}_{\dot{\alpha}} = i (\epsilon \sigma^{\mu})_{\dot{\alpha}} \partial_{\mu} \phi^{*} + \epsilon^{\dag}_{\dot{\alpha}} \mathcal{F}^{*}$
+
+\item p. 21\newline
+查 closure 的定義.\newline
+\textcolor{blue}{Ans:}
+
+\item p. 26\newline
+$\overline{\theta} \overline{\sigma}^{\mu} \theta v_{\mu}$ 項，為什麼要有 $\overline{\sigma}^{\mu}$？$v_{\mu}$ 是什麼？\newline
+建議用 $\theta^{2}$ 取代 $\theta \theta$.\newline
+\textcolor{blue}{Ans:}
+\begin{equation*}
+\overline{\theta} \overline{\sigma}^{\mu} \theta = \overline{\theta}_{\dot{\alpha}} (\overline{\sigma}^{\mu})^{\dot{\alpha} \alpha} \theta_{\alpha}
+\end{equation*}
+其中 $(\overline{\sigma}^{\mu})^{\dot{\alpha} \alpha} = (1, +\sigma_{i})^{\dot{\alpha} \alpha}$，不能直接乘，因為一個是 ${\dot{\alpha}}$ 另一個是 $\alpha$.\newline
+$v_{\mu}$ 是 $A_{\mu}$ (gauge boson field).
+
+\item p. 27\newline
+為什麼 $Q$ 中會有 $\sigma$?\newline
+\textcolor{blue}{Ans:} 見 Theis P9 的推導.
+
+\item p. 32\newline
+$\sqrt{2}$ 一直出現，為什麼？\newline
+\textcolor{blue}{Ans:} Bilal P.21: normalization of fields and the definition of $\delta \phi$\newline
+Martin P.20: Historical reason. Lykken P.20: convension.
+
+\item p. 33\newline
+Define C, D, M, .\newline
+real scalars 用 real scalar fields 取代.\newline
+\textcolor{blue}{Ans:}
+C 是 scalar field, D 是 real 的輔助場 $D_{a}$ (gauge auxiliary field), $\lambda$ 是 gaugino field.
+$\frac{i}{2}(M + i N)$ 是 $\mathcal{F}$, $-\frac{i}{2}(M - i N)$ 是 $\mathcal{F}^{*}$.
+
+\item p. 35\newline
+$V_{WZ}$ 是否仍然是 invariant？\newline
+\textcolor{blue}{Ans:}
+
+\item p. 41\newline
+M, m 是什麼？\newline
+\textcolor{blue}{Ans:} M is mass.\newline
+Fermion mass term:
+\begin{equation*}
+-\frac{1}{2} \psi_{i} \langle \frac{\partial^{2} W}{\partial \phi_{i} \partial \phi_{j}} \rangle \psi_{j}
+\end{equation*}
+e.g. $\langle \phi_{1} \rangle = 0 \Rightarrow M_{\psi 2} = M_{\psi 3} = M, \quad M_{\psi 1} = 0$.\newline
+scalar mass $V = W^{i} W^{*}_{i} \Rightarrow M_{\phi 1} = 0, M_{\phi 2} = M$, $\phi_3$ 是 complex field $\frac{1}{\sqrt{2}}(a + i b)$.
+\begin{equation*}
+m^2_{a} = M^{2} - 2 g^{2} m^{2}, m^{2}_{b} = M^{2} + 2 g^{2} m^{2}.
+\end{equation*}
+
+
+\item p. 44\newline
+有兩個 Higgs doublet，那麼哪一個是 Standard Model 的 Higgs?\newline
+\textcolor{blue}{Ans:} 是 $h_{0}$.\newline
+8 個 Higgs state 在 symmetry breaking 後，其中 3 個形成 $W^{\pm}$, $Z^{0}$, 5 個形成 $A_{0}$, $h_{0}$, $H_{0}$, $H^{\pm}$.\newline
+$A_{0}$: pseudoscalar，由 $(\Im \frac{H^{0}_{u}}{\sqrt{2}}, \Im \frac{H^{0}_{d}}{\sqrt{2}})$ 形成,\newline
+$h_{0}, H_{0}$: neutral scalar，由 $(\Re \frac{H^{0}_{u}}{\sqrt{2}}, \Re\frac{H^{0}_{d}}{\sqrt{2}})$ 形成,\newline
+$h_{0}$ 是接近 SM Higgs 質量的.
+
+\item p. 60\newline
+查 $W^{0}$ 和 $B^{0}$ 如何 mix 成 $Z^{0}$ 和 $\gamma$? (Griffiths 的粒子物理課本可能有答案)\newline
+\textcolor{blue}{Ans:}
+\begin{align*}
+A_{\mu} &= B_{\mu} \cos \theta_{W} + W^{3}_{\mu} \sin \theta_{W}\\
+Z_{\mu} &= -B_{\mu} \sin \theta_{W} + W^3_{\mu} \cos \theta_{W}
+\end{align*}
+其中 $\theta_{W} = 28.75^{\circ}$ is weak mixing angle.
+
+\item p. 61\newline
+Hypercharge 的定義是什麼?\newline
+\textcolor{blue}{Ans:} Y = S + A, S = strangeness, A = baryon number, 見 backup 66,
+$H_{u}: Y = \frac{1}{2}, H_{d}: Y = - \frac{1}{2}, T_{3} = \frac{1}{2} \textrm{ or } -\frac{1}{2}$.
+
+
+\item p. 63\newline
+$\tilde{\overline{t}} \tilde{t} H^{0}_{u} - \tilde{\overline{t}}_{L} \tilde{b}_{L} H^{+}_{u}$ 第二項代表什麼？\newline
+\textcolor{blue}{Ans:} 是 stop 和 sbottom 的 coupling term.
+$H^0_{u}$ only neutral Higgs has VEV $\neq$ 0.
+
+\end{itemize}
+\end{document}

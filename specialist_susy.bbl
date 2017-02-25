@@ -1,0 +1,58 @@
+\begin{thebibliography}{10}
+
+\bibitem{wess_and_zumino}
+J.~Wess and B~Zumino.
+\newblock Supergauge transformations in four dimensions.
+\newblock {\em Nuclear Physics B}, 70:39, 1974.
+
+\bibitem{running_coupling_constants}
+http://www.nobelprize.org/nobel\_prizes/physics/laureates/2004/phypub4highen.jpg.
+
+\bibitem{O_Raifeartaigh}
+L.~O'Raifeartaigh.
+\newblock Spontaneous symmetry breaking for chirals scalar superfields.
+\newblock {\em Nucl. Phys. B}, 96:331, 1975.
+
+\bibitem{majorana}
+E.~Majorana.
+\newblock Theory of the symmetry of electrons and positrons.
+\newblock {\em Nuovo Cim}, 14:171, 1937.
+
+\bibitem{helicity}
+http://commons.wikimedia.org/wiki/file:right\_left\_helicity.svg.
+
+\bibitem{peskin_qft}
+Peskin and Schroeder.
+\newblock {\em An Introduction to Quantum Field Theory}.
+\newblock Equations (3.41) and (3.42).
+
+\bibitem{arXiv:1006.1718v2}
+Palash~B. Pal.
+\newblock Dirac, majorana and weyl fermions.
+\newblock {\em arXiv:1006.1718v2 [hep-ph]}, Oct 2010.
+
+\bibitem{Bilal}
+Adel Bilal.
+\newblock Introduction to supersymmetry.
+\newblock {\em arXiv:hep-th/0101055v1}, Jan 2001.
+
+\bibitem{larsenf}
+{http://www-personal.umich.edu/$\sim$larsenf/Lecture1.pdf}.
+
+\bibitem{atlas_detector}
+ATLAS Collaboration.
+\newblock The atlas experiment at the cern large hadron collider.
+\newblock {\em JINST S08003 doi:10.1088/1748-0221/3/08/S08003}, 3, 2008.
+
+\bibitem{atlas_results}
+https://twiki.cern.ch/twiki/bin/view/atlaspublic/supersymmetrypublicresults.
+
+\bibitem{cms_detector}
+CMS Collaboration.
+\newblock The cms experiment at the cern lhc.
+\newblock {\em JINST S08004, doi:10.1088/1748-0221/3/08/S08004}, 3, 2008.
+
+\bibitem{cms_results}
+https://twiki.cern.ch/twiki/bin/view/cmspublic/susysmssummaryplots8tev.
+
+\end{thebibliography}
